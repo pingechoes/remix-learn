@@ -1,4 +1,4 @@
-import { Outlet, LiveReload, Links } from 'remix';
+import { Outlet, LiveReload, Links, Scripts } from 'remix';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -10,7 +10,7 @@ export const links = () => {
   return [
     { rel: 'icon', href: '/favicon.ico' },
     { rel: 'stylesheet', href: styles },
-    { rel: 'stylesheet', href: tailwindStyles}
+    { rel: 'stylesheet', href: tailwindStyles },
   ];
 };
 
@@ -19,14 +19,15 @@ export default function App() {
     <html lang="eng">
       <head>
         <Links />
-        <meta charSet="utf-8"/>
+        <meta charSet="utf-8" />
         <title>ARUCA.STUDIO</title>
       </head>
       <body className="text-primary--gray antialiased">
         <Navbar />
-        <Outlet className="absolute top-0 w-full h-full"/>
-        {process.env.NODE_ENV === 'development' ? <LiveReload /> : null}
+        <Outlet className="absolute top-0 w-full h-full" />
         <Footer />
+        <Scripts />
+        {process.env.NODE_ENV === 'development' ? <LiveReload /> : null}
       </body>
     </html>
   );
