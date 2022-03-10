@@ -2,10 +2,9 @@ import { Outlet } from 'remix';
 
 function Works() {
   return (
-    <div className="relative mx-10vw">
+    <div className="min-h-full">
       <Outlet />
     </div>
-    
   );
 }
 

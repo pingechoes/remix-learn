@@ -20,11 +20,11 @@ export default function App() {
       <head>
         <Links />
         <meta charSet="utf-8" />
-        <title>ARUCA.STUDIO</title>
+        <title>STUDIO.ARUCA</title>
       </head>
-      <body className="text-primary--gray antialiased">
+      <body className="text-primary--gray antialiased flex flex-col">
         <Navbar />
-        <Outlet className="absolute top-0 w-full h-full" />
+        <Outlet />
         <Footer />
         <Scripts />
         {process.env.NODE_ENV === 'development' ? <LiveReload /> : null}
