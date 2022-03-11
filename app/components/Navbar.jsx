@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink, Link } from 'remix';
 import { Disclosure } from '@headlessui/react';
 
@@ -10,7 +9,7 @@ const LINKS = [
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="border-b-[1px] border-light--gray py-5">
+    <Disclosure as="nav" className="border-b-[1px] border-light--gray py-3">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
